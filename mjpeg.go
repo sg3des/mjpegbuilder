@@ -13,7 +13,7 @@ Let's see an example how to turn the JPEG files 1.jpg, 2.jpg, ..., 10.jpg into a
     }
 
     // Video size: 200x100 pixels, FPS: 2
-    aw, err := mjpeg.New("test.avi", 200, 100, 2)
+    aw, err := mjpegbuilder.New("test.avi", 200, 100, 2)
     checkErr(err)
 
     // Create a movie from images: 1.jpg, 2.jpg, ..., 10.jpg
@@ -27,7 +27,7 @@ Let's see an example how to turn the JPEG files 1.jpg, 2.jpg, ..., 10.jpg into a
 
 Example to add an image.Image as a frame to the video:
 
-    aw, err := mjpeg.New("test.avi", 200, 100, 2)
+    aw, err := mjpegbuilder.New("test.avi", 200, 100, 2)
     checkErr(err)
 
     var img image.Image
@@ -40,7 +40,7 @@ Example to add an image.Image as a frame to the video:
 
     checkErr(aw.Close())
 */
-package mjpeg
+package mjpegbuilder
 
 import (
 	"encoding/binary"
